@@ -1,0 +1,82 @@
+{% extends "skeleton/_root.html" %}
+{% block all %}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>
+			{% block title %}
+			Seth Woodworth - {{site.name}} : {{page.module.name}} : {{page.title}}
+			{% endblock %}
+		</title>
+
+		{% block feeds %}
+    <!-- feeds -->
+		<link href="{{site.url}}/blog/atom.xml" rel="alternate" title="{{site.name}}" type="application/atom+xml"/>
+		{% endblock %}
+
+		{% block css %}
+    <!-- css -->
+		<link rel="stylesheet" href="{{site.url}}/media/css/squaregrid.css" type="text/css" media="screen, projection" charset="utf-8">
+		<link rel="stylesheet" href="{{site.url}}/media/css/base.css" type="text/css" media="screen" charset="utf-8">
+		{% endblock %}
+		
+		{% block js %}
+    <!-- js -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript">
+      // This lets me see my css grid via button
+      $(document).ready(function(){ 
+        $("#controller ul li a").click(function () { 
+          var className = $(this).attr('class'); 
+          $('body').css("background-image", "url(/media/images/sg_grid_" + className + ".png)"); 
+          $('body').css("background-position", "center"); 
+          $("#controller ul li").removeClass('selected'); 
+          $(this).parent().addClass('selected');
+        }); 
+      });
+    </script>
+		{% endblock %}
+	</head>
+
+	<body>
+		<div id="main">
+
+      <div id="left" class="parent">
+        <div id="side-top">
+          <br />
+        </div> <!-- side-top -->
+        <div id="side-head">
+          <h4>
+            {% block lefttitle %}
+            {% endblock %}
+          </h4>
+        </div> <!-- side-head -->
+      </div> <!-- left -->
+
+      <div id="center" class="parent">
+        {% include "skeleton/_header.html" %}
+
+        {% block content %}{% endblock %}
+
+        {% include "skeleton/_footer.html" %}
+
+        <div class="clear"></div>
+      </div> <!-- center -->
+      <div id="right" class="parent">
+        <div id="side-top">
+          <br />
+        </div> <!-- side-top -->
+        <div id="side-content">
+          {% block rightcontent %}
+          {% endblock %}
+        </div> <!-- side-content -->
+      </div> <!-- right -->
+
+		</div> <!-- #main -->
+	</body>
+</html>
+
+{% endblock %}
