@@ -1,0 +1,38 @@
+<div id="header" class="parent">
+  <div id="title">
+    {% block breadcrumbs %}
+    {% include "skeleton/_breadcrumbs.html"%}
+    {% endblock %}
+    <br/>
+    <h2>Seth Woodworth</h2>
+    <h2>Sethish</h2>
+  </div> <!-- title -->
+
+  <div id="listcats">
+    <span class="work">work</span>
+    <span class="play">play</span>
+    <span class="hack">hack</span>
+    <span class="libre">libre</span>
+    <span class="edu">edu</span>
+  </div> <!-- cats -->
+
+  {% block sitenav %}
+  <div id="sitenav">
+    <ul> <!-- TODO: These links don't work -->
+      <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
+        <h4><a href="/">Home</a></h4>
+      </li>    
+      <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
+        <h4><a href="/blog">Blog</a></h4>
+      </li>    
+      <li>
+        <h4><a href="http://twitter.com/sethish">Twitter</a></h4>
+      </li>    
+    </ul>
+  </div> <!-- #sitenav -->
+  {% endblock %} {# endblock sitenav #}
+
+  {% block context_nav %}
+  {% endblock %}
+
+</div> <!-- #header -->
