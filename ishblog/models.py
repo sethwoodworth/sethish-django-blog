@@ -1,5 +1,4 @@
 from django.db import models
-import datetime
 
 class Entry(models.Model):
     # loaded via yaml file
