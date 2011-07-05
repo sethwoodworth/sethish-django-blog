@@ -2,12 +2,14 @@ from django.db import models
 import datetime
 
 class Entry(models.Model):
+    # loaded via yaml file
     title       = models.CharField(max_length=140)
-    snip        = models.CharField(max_length=140)
     slug        = models.SlugField()
     pub_date    = models.DateTimeField('Date Published')
-    body        = models.TextField()
     published   = models.BooleanField(default=False)
+    # by way of markdown files
+    snip        = models.CharField(max_length=140)
+    body        = models.TextField()
 
     class Meta:
         verbose_name        = 'entry'
