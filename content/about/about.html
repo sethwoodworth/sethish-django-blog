@@ -1,0 +1,24 @@
+{% extends "_staticpage.html" %}
+
+{%hyde
+    title: "About Awesome Quotient"
+%}
+
+{% block article %}
+{% filter typogrify %}
+<p>
+"Awesome Quotient" is a blog by Seth Woodworth (
+<a class="{# class for webstuff? #}" href="http://twitter.com/sethish/">@sethish</a>). It uses the 
+<a class="code" href='https://github.com/lakshmivyas/hyde'>Hyde static website generator</a>.
+Significant style comes from Scott Chacon's 
+<a class="code" href='http://github.com/schacon/whygitisbetter'>Why Git is Better than X</a>.
+</p>
+
+<p>
+The sourcecode for this site is available 
+<a class="code" href="http://github.com/sethwoodworth/hyde-blog" rel="me">at my Github</a>. The content of the site is 
+licensed under the <a class="libre" href="http://creativecommons.org">CC-by</a> license.
+</p>
+
+{% endfilter %}
+{% endblock %}
