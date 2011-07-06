@@ -2,7 +2,7 @@ from django.db import models
 
 class Entry(models.Model):
     # loaded via yaml file
-    title       = models.CharField(max_length=140)
+    title       = models.CharField(unique=True, max_length=140)
     slug        = models.SlugField()
     pub_date    = models.DateTimeField('Date Published')
     published   = models.BooleanField(default=False)
