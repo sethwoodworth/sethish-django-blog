@@ -1,4 +1,3 @@
-{% extends "skeleton/_root.html" %}
 {% block all %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -19,8 +18,8 @@
 
 		{% block css %}
     <!-- css -->
-		<link rel="stylesheet" href="{{site.url}}/media/css/squaregrid.css" type="text/css" media="screen, projection" charset="utf-8">
-		<link rel="stylesheet" href="{{site.url}}/media/css/base.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="{{site.url}}/static/css/squaregrid.css" type="text/css" media="screen, projection" charset="utf-8">
+		<link rel="stylesheet" href="{{site.url}}/static/css/base.css" type="text/css" media="screen" charset="utf-8">
 		{% endblock %}
 		
 		{% block js %}
@@ -57,11 +56,11 @@
       </div> <!-- left -->
 
       <div id="center" class="parent">
-        {% include "_header.html" %}
+        {% include "blog/_header.html" %}
 
         {% block content %}{% endblock %}
 
-        {% include "_footer.html" %}
+        {% include "blog/_footer.html" %}
 
         <div class="clear"></div>
       </div> <!-- center -->
