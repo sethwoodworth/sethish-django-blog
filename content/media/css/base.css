@@ -1,0 +1,342 @@
+/* RESET CSS by http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0;} /* source: http://sonspring.com/journal/clearing-floats */
+
+html {
+
+  }
+body {
+  margin-top:   28px;
+  /* colors */
+  background-color: #F0F0FF;
+  color:            #463E34;
+  /* body fonts */
+  font-family:  Verdana, sans-serif;
+  font-size:    62.5%;  /* Keep this */
+  line-height:  28px;
+}
+
+/* global styling to apply to all 'columns' from squaregrid.css */
+.sg-1{width:28px} .sg-2{width:56px} .sg-3{width:84px} .sg-4{width:112px} .sg-5{width:140px} .sg-6{width:168px} .sg-7{width:196px} .sg-8{width:224px} .sg-9{width:252px} .sg-10{width:280px} .sg-11{width:308px} .sg-12{width:336px} .sg-13{width:364px} .sg-14{width:392px} .sg-15{width:420px} .sg-16{width:448px} .sg-17{width:476px} .sg-18{width:504px} .sg-19{width:532px} .sg-20{width:560px} .sg-21{width:588px} .sg-22{width:616px} .sg-23{width:644px} .sg-24{width:672px}
+
+/* add a dividing border to the right or left simply by addiing one of these classes to a div */
+.borderRight{border-right:1px solid #222; margin-right:0px; padding-right:13px;}
+.borderLeft  {border-left:1px solid #222; margin-left:0px; padding-left:13px;}
+
+h1 { font-size: 3.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 2.5em; }
+h4 { font-size: 1.5em; }
+
+p {
+  font-family:  Georga, serif;
+  font-size:    16pt;
+  margin:       0px 28px 28px 28px;
+  }
+
+
+div {
+  /* all divs should use the same grid spacing margin and float */
+  margin: 0px 14px 28px 14px;
+  float:  left;
+  }
+
+/* MAIN LAYOUT */
+#main {
+  margin:       auto;
+  width:        1008px;
+  float:        none; /* means it undoes div{ float: left} */
+  /*margin-top:   14px; /* gives 1/2 space above but still is centered */
+  }
+
+#left {
+  /* see SECTION LEFT for details */
+  width:  112px; /* x4 28px spaces */
+  }
+
+#center {
+  background-color: #FEFEFF;
+  width:            672px;  /* x24 28px spaces */
+
+  }
+
+#right {
+  width: 112px; /* x4 28px spaces */
+  }
+
+/* SECTION LEFT */
+#side-top {
+  height:     112px; /* four rows tall          */
+  width:      112px;  /* four columns wide      */
+  }
+
+#side-head {
+  position:   fixed;
+  margin-top: 140px;  /* five rows from the top */
+  width:      112px;  /* four columns wide      */
+  }
+
+#side-content {
+  margin-top: 140px;  /* five rows from the top */
+  width:      112px;  /* four columns wide      */
+
+  }
+/* LISTING STYLING */
+
+/* POST STYLING */
+#content-header {
+  }
+#post-content {
+  }
+
+.parent {
+  margin: 0px; /* on any container that nests */
+  }
+
+/* HEADER LAYOUT */
+#header {
+  border-bottom:  1px solid #EEE; /* TODO: tmp */
+  height:         112px;          /* 4-row */
+  }
+
+#title {
+  width: 308px /* 11-col */
+  }
+
+#title h2 {
+  font-size: 3.5em;
+  font-weight: normal;
+  }
+
+#intro {
+  width:      588px;
+  margin-top: 28px;
+}
+
+div#intro p {
+  font-size:  2.75em;
+  text-align: center;
+  font-style: italic;
+  }
+
+div.space {
+  width:      28px;
+  margin-top: 28px;
+}
+
+
+ul.breadcrumbs {
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  }
+
+.breadcrumbs li { display: inline; }
+.breadcrumbs a {
+  text-decoration: none;
+  color: #4D6680;
+}
+
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs .separator { color: #4f6072; }
+
+div#sitenav li, div#sitenav h4 {
+  display:      inline;
+  margin-right: 7px;
+  text-align:   center;
+  }
+/*
+#sitenav {
+    text-align: center;
+    border-bottom: .2em solid #4d6680;
+    padding-bottom: 0.2em;
+}
+*/
+
+/* category stuff */
+#listcats {
+  width:        252px; /* 11-col */
+  font-weight:  bold;
+  padding:      3px;
+  color:        #555;
+  }
+
+div.section div.title {
+  background-color: #EEE;
+  float:            right;
+  border:           #ccc 1px solid;
+  width:            616px;
+  }
+
+div.section img {
+  /* center images in column */
+  /* TODO: apply to all images? */
+  display:  block;
+  margin:   0 auto;
+  }
+
+div.section img.right {
+  border:     2px solid black;
+  float:      right;
+  margin:     10px;
+  }
+
+#title.span {
+  float:  right;
+  }
+
+span.work   {
+  background: #A8A8D6;
+  padding:    3px;
+  width:      28px;
+  }
+span.play   {
+  background: #A8D6CD;
+  padding:    3px;
+  width:      28px;
+  }
+span.hack   {
+  background: #BBD6A8;
+  padding:    3px;
+  width:      28px;
+  }
+span.libre  {
+  background: #D6BBA8;
+  padding:    3px;
+  width:      28px;
+  }
+span.edu    {
+  background: #D6A8CD;
+  padding:    3px;
+  width:      28px;
+  }
+
+span.date       { background-color: #A8D6CD }
+span.post-date  { color: #808094 }
+
+
+a.work    { background-color: #A8A8D6; }
+a.play    { background-color: #A8D6CD; }
+a.hack    { background-color: #BBD6A8; }
+a.libre   { background-color: #D6BBA8; }
+a.edu     { background-color: #D6A8CD; }
+a.out     { background-color: #FAFDFF; }
+
+
+a {
+  color: #4D6680;
+  text-decoration: none;
+  }
+
+a:hover {
+  text-decoration: underline;
+  }
+
+
+/* Frontpage */
+.section h3 {
+  display:      inline;
+  margin-left:  14px;
+  }
+
+a.more {
+  float:  right;
+  }
+
+
+/*
+.expand_collapse_links { text-align: center; margin-bottom: 1.5em; display: none; }
+.expand_collapse_links a { color: #555; }
+img { margin-bottom: 10px; }
+
+.center { text-align: center; }
+.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify; vertical-align: baseline;}
+.intro { color: #444; }
+ul li { margin-top: 10px; }
+.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
+.section h2 a { color: #333; text-decoration:none; display: block; }
+.section { padding-bottom: 2px; }
+.contents { padding: 0 10px; width: 610px; }
+.args { float:right; }
+.lang { padding: 3px; font-weight: bold;}
+.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
+.work { color: #555555; background: #A8A8D6 }
+.play { color: #555555; background: #A8D6CD }
+.hack { color: #555555; background: #BBD6A8 }
+.libre { color: #555555; background: #D6BBA8 }
+.edu { color: #555555; background: #D6A8CD }
+.nowrap { white-space: nowrap; }
+.sweet { color: #363; background: #beb; }
+.compare { color: #663; background: #eeb; }
+.help pre { font-size: 12px; }
+.help td { vertical-align: top; }
+code { font-size: 90%; }
+.footer { text-align: center; color: #663; background-color: #eea; padding: 10px;}
+.footer a { color: #440; }
+.footer-lang { text-align: center; color: #443; background-color: #dda; padding: 5px; font-size: 90%; }
+.footer-lang a { color: #330; }
+.footer-badges { text-align: center; }
+.footer-badges a { color: #777; }
+.lang a {color: inherit; text-decoration: none;}
+.note { text-decoration: italic; color: #666; padding: 1em; }
+
+#blog-head p { font-size: 27px; text-align: center }
+#midhead, #content-mid { background-color: #FEFEFF; }
+#midhead {
+  margin-bottom: 0px;
+}
+
+
+/* this came with the stock template */
+/* extra excape
+ul { margin: 0; }
+
+#footer {
+    text-align: center;
+    border-top: 1px solid #b5cce3;
+    margin: 2em auto 0;
+    font-size: 0.7em;
+}
+
+a { color: #55757B; }
+
+
+
+/*
+
+#sitenav ul { list-style-type: none; }
+
+#sitenav li {
+    display: inline;
+    margin-left: .2em;
+}
+
+#sitenav a {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #b5cce3;
+    color: #4d6680;
+}
+
+#sitenav .selected a {
+    background-color: #4d6680;
+    color: #b5cce3;
+}
+
+#content-header{
+    padding-bottom:.5em;
+}
+
+#content-header h1{
+    border-bottom: 1px dotted #4d6680;
+    margin-bottom:.5em;
+}
+
+.post-date{
+    float:right;
+    font-style:italic;
+    font-size:.8em;
+
+}
+*/
