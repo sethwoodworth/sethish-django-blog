@@ -1,0 +1,57 @@
+{% extends "blog/_body.html"%}
+
+{% block content_header %}
+{% endblock %}
+
+{% block content_body %}
+
+<div class="space"></div>
+{% recent_posts recents 5 %}
+{% for post in recents %}
+  <div class="section">
+    <div class="title">
+      <h3><a href='{{ post.url }}'>{{ post.title }}</a></h3>
+    </div> <!-- .title -->
+    {% render_excerpt post %} <br />
+    <a class="more" href='{{ post.url }}'>read more&hellip;</a> <br />
+    <hr />
+  </div> <!-- section -->
+{%endfor%}
+
+
+<div class="clear"></div>
+
+{% endblock %} {# content_body #}
+
+{% block rightcontent %}
+<div class="page-listing">
+<h4>{{ 02011 }} 02011 name</h4>
+
+<ul>
+  {% for post in 02011.walk_pages %}
+  {% ifnotequal post 02011.listing_page %}
+  {% if post.display_in_list %}
+    <li>
+      <a href="{{post.url}}">
+      {% with post.name_without_extension|remove_date_prefix|unslugify as default_title %}
+        {{post.title|default_if_none:default_title }}
+      {%endwith%}</a>
+      <!-- <span>0{{list_page.created|date:"Y-m-d" }}  </span> -->
+      <hr/>
+    </li>
+  {%endif%}
+  {% endifnotequal %}
+	{% endfor %}
+</ul>
+<br />
+<br />
+<br />
+SPACE
+<br />
+
+    {% for node in page.node.walk %}
+      {% include "skeleton/_innerlisting.html" %}
+    {% endfor %}
+  </div>
+
+{% endblock %} {# rightcontent #}
