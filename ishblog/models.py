@@ -15,7 +15,7 @@ class Entry(models.Model):
         verbose_name_plural = 'entries'
 
     def get_absolute_url(self):
-        return u'/blog/0%d/%02d/%s/' % (self.pub_date.year, self.pub_date.month, self.slug)
+        return u'/blog/0%d/%s/' % (self.pub_date.year, self.slug)
 
     def __unicode__(self):
         return u'%s' % (self.title,)
