@@ -1,4 +1,5 @@
 {% extends "blog/_base.html"%}
+{% load markup %}
 
 {% block content_header %}
 {% endblock %}
@@ -9,10 +10,10 @@
 {% for entry in entries %}
   <div class="section">
     <div class="title">
-      <h3><a href='{{ entry.url }}'>{{ entry.title }}</a></h3>
+      <h3><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h3>
     </div> <!-- .title -->
-    {{ entry.snip }} <br />
-    <a class="more" href='{{ entry.url }}'>read more&hellip;</a> <br />
+    {{ entry.snip|markdown }} <br />
+    <a class="more" href='{{ entry.get_absolute_url }}'>read more&hellip;</a> <br />
     <hr />
   </div> <!-- section -->
 {%endfor%}
@@ -23,13 +24,12 @@
 {% endblock %} {# content #}
 
 {% block rightcontent %}
-<div class="page-listing">
 <h4>Articles</h4>
 
   <ul>
     {% for entry in entries %}
       <li>
-        <a href="{{ entry.url }}"> {{ entry.title }} </a>
+        <a href="{{ entry.get_absolute_url }}"> {{ entry.title }} </a>
         <span>0{{ entry.pub_date|date:"Y-m-d" }}  </span>
         <hr/>
       </li>
@@ -40,6 +40,4 @@
   <br />
   SPACE
   <br />
-
-</div>
 {% endblock %} {# rightcontent #}

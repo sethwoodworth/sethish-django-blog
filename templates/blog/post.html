@@ -1,31 +1,16 @@
 {% extends "blog/_base.html" %}
+{% load markup %}
 
-{% block content_body %}
+{% block content %}
 
-<div id="post-content">
-	{% filter typogrify %}
+  <div id="content-header">
+      <h1>{{ entry.title }}</h1>
+      <span class="post-date">0{{ entry.pub_date|date:"Y M d" }}</span>
+  </div>
 
-	{% markdown %}
 
-	{% block article %}
-	{% endblock %}
-		
-	{% endmarkdown %}
+  <div id="post-content">
+      {{ entry.body|markdown }}
+  </div>
 
-	{% endfilter %}
-</div>
-
-{% endblock %}
-
-{% block content_header %}
-
-<div id="content-header">
-    <h1>{{ page.title }}</h1>
-    <span class="post-date">0{{ page.created|date:"Y M d"}}</span>
-</div>
-
-{% endblock %}
-
-{% block context_nav %}
-{% include "skeleton/_context_nav.html" %}
-{% endblock %}
+{% endblock %} {# content #}
