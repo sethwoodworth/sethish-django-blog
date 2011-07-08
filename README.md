@@ -11,8 +11,8 @@ Roadmap
 ### v.1-alpha
 This release is to get my project out the door and a static site generated
 - finish first post
-- make css/html render properly
-- make affordances for static pages (hardcode in urls.py?)
++ make css/html render properly
++ make affordances for static pages (hardcode in urls.py?)
 - write script to crawl/render all pages
 
 ### v.2-beta
@@ -22,6 +22,9 @@ This release is the functional version for my purposes.
 - cleanup nagging css issues
 - rss feed generation
 - robots.txt generation
+- Fix spacing of mid-post h3s
+- add blockquote indenting and style change (boarder and bgcolor?)
+- make method for static pages
 
 ### v.3-beta2
 This is approaching my complete desired feature set
@@ -30,3 +33,4 @@ This is approaching my complete desired feature set
 - generate smarter metadata
 - a jquery twitter/feed widget
 - scripts to enable editing (vim -O $TITLE.md $TITLE.yaml: $title, timestamp)
+
